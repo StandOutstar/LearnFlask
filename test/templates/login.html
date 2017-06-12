@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Plaease login</h1>
+<form action="/login" method="post" >
+    <label>username: </label><input type="text" name="username" value="{{ request.form.get('username') }}"><br>
+    <label>password: </label><input type="password" name="password" value="{{ request.form.get('password') }}"><br>
+    <input type="submit" name="submit">
+</form>
+<h2>{{ get_flashed_messages()[0] }}</h2>
+</body>
+</html>
